@@ -9,36 +9,24 @@ const router = createRouter({
       component: () => import('../views/HomeView.vue'),
       children: [
         {
-          path: 'ideas',
-          component: () => import('../components/All/IdeasComp.vue')
+          path: 'general',
+          component: () => import('../components/General/GeneralComp.vue')
         },
         {
-          path: 'contacts',
-          component: () => import('../components/All/ContactComp.vue')
+          path: 'blocked',
+          component: () => import('../components/Blocked/BlockedComp.vue')
         },
         {
-          path: 'agents',
-          component: () => import('../components/All/AgentsComp.vue')
+          path: 'employees',
+          component: () => import('../components/Employees/EmployeesComp.vue')
         },
         {
-          path: 'tickets',
-          component: () => import('../components/All/TicketsComp.vue')
+          path: 'managers',
+          component: () => import('../components/Managers/ManagersComp.vue')
         },
         {
-          path: 'articles',
-          component: () => import('../components/All/ArticlesComp.vue')
-        },
-        {
-          path: 'settings',
-          component: () => import('../components/All/SettingsComp.vue')
-        },
-        {
-          path: 'subscription',
-          component: () => import('../components/All/SubscriptionComp.vue')
-        },
-        {
-          path: '/',
-          component: () => import('../components/All/OverviewComp.vue')
+          path: 'tasks',
+          component: () => import('../components/Tasks/TasksComp.vue')
         }
       ]
     }
