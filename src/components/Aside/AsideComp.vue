@@ -1,81 +1,113 @@
 <script setup>
-// import { RouterView } from 'vue-router'
 import './Aside.css'
 </script>
 
 <template>
     <div class="all__wrapper">
             <aside class="aside">
-                <router-link class="router__active" to="/">
+                <router-link class="router__active" to="/general">
                     <img class="aside__logo" src="/img/logo.svg" alt="logo">
                 </router-link>
                 <ul class="aside__list">
                     <li class="aside__item">
-                        <router-link to="/" class="aside__link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                <g clip-path="url(#clip0_584_253)">
-                                    <path d="M15.5232 8.94116H8.54412L13.1921 13.5891C13.3697 13.7667 13.6621 13.7812 13.8447 13.6091C14.9829 12.5367 15.7659 11.0912 15.9956 9.46616C16.035 9.18793 15.8041 8.94116 15.5232 8.94116ZM15.0576 7.03528C14.8153 3.52176 12.0076 0.714119 8.49412 0.471767C8.22589 0.453237 8 0.679413 8 0.948236V7.5294H14.5815C14.8503 7.5294 15.0762 7.30352 15.0576 7.03528ZM6.58824 8.94116V1.96206C6.58824 1.68118 6.34147 1.45029 6.06353 1.48971C2.55853 1.985 -0.120585 5.04705 0.00412089 8.71675C0.132356 12.4856 3.37736 15.5761 7.14794 15.5288C8.6303 15.5103 10 15.0326 11.1262 14.2338C11.3585 14.0691 11.3738 13.727 11.1724 13.5256L6.58824 8.94116Z"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_584_253">
-                                        <rect width="16" height="16"/>
-                                    </clipPath>
-                                </defs>
+                        <router-link to="/general" class="aside__link">
+                            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	                            <defs>
+		                            <clipPath id="clip5_1971">
+			                            <rect id="filled/action/dns" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		                            </clipPath>
+	                            </defs>
+	                            <g clip-path="url(#clip5_1971)">
+	                            	<path id="Vector" d="M16.66 10.83L3.33 10.83C2.87 10.83 2.5 11.2 2.5 11.66L2.5 16.66C2.5 17.12 2.87 17.5 3.33 17.5L16.66 17.5C17.12 17.5 17.5 17.12 17.5 16.66L17.5 11.66C17.5 11.2 17.12 10.83 16.66 10.83ZM5.83 15.83C4.91 15.83 4.16 15.08 4.16 14.16C4.16 13.25 4.91 12.5 5.83 12.5C6.75 12.5 7.5 13.25 7.5 14.16C7.5 15.08 6.75 15.83 5.83 15.83ZM16.66 2.5L3.33 2.5C2.87 2.5 2.5 2.87 2.5 3.33L2.5 8.33C2.5 8.79 2.87 9.16 3.33 9.16L16.66 9.16C17.12 9.16 17.5 8.79 17.5 8.33L17.5 3.33C17.5 2.87 17.12 2.5 16.66 2.5ZM5.83 7.5C4.91 7.5 4.16 6.75 4.16 5.83C4.16 4.91 4.91 4.16 5.83 4.16C6.75 4.16 7.5 4.91 7.5 5.83C7.5 6.75 6.75 7.5 5.83 7.5Z" fill="#14B890" fill-opacity="1.000000" fill-rule="nonzero"/>
+	                            </g>
                             </svg>
-                            <p class="aside__text">Overview</p>
+                            <p class="aside__text">Umumiy</p>
                         </router-link>
                     </li>
                     <li class="aside__item">
-                        <router-link to="/tickets" class="aside__link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" >
-                                <path d="M3.55556 5.33332H12.4444V10.6667H3.55556V5.33332ZM14.6667 7.99999C14.6667 8.73638 15.2636 9.33332 16 9.33332V12C16 12.7364 15.4031 13.3333 14.6667 13.3333H1.33333C0.596944 13.3333 0 12.7364 0 12V9.33332C0.736389 9.33332 1.33333 8.73638 1.33333 7.99999C1.33333 7.2636 0.736389 6.66666 0 6.66666V3.99999C0 3.2636 0.596944 2.66666 1.33333 2.66666H14.6667C15.4031 2.66666 16 3.2636 16 3.99999V6.66666C15.2636 6.66666 14.6667 7.2636 14.6667 7.99999ZM13.3333 5.1111C13.3333 4.74291 13.0349 4.44443 12.6667 4.44443H3.33333C2.96514 4.44443 2.66667 4.74291 2.66667 5.1111V10.8889C2.66667 11.2571 2.96514 11.5555 3.33333 11.5555H12.6667C13.0349 11.5555 13.3333 11.2571 13.3333 10.8889V5.1111Z"/>
+                        <router-link to="/blocked" class="aside__link">
+                            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	                            <defs>
+	                            	<clipPath id="clip5_1976">
+	                            		<rect id="filled/toggle/check-box" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+	                            	</clipPath>
+	                            </defs>
+	                            <g opacity="0.400000">
+	                            	<rect id="filled/toggle/check-box" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	                                <g clip-path="url(#clip5_1976)">
+	                            		<path id="Vector" d="M15.83 2.5L4.16 2.5C3.24 2.5 2.5 3.25 2.5 4.16L2.5 15.83C2.5 16.75 3.24 17.5 4.16 17.5L15.83 17.5C16.75 17.5 17.5 16.75 17.5 15.83L17.5 4.16C17.5 3.25 16.75 2.5 15.83 2.5ZM8.33 14.16L4.16 10L5.34 8.82L8.33 11.8L14.65 5.48L15.83 6.66L8.33 14.16Z" fill="#141A18" fill-opacity="0.600000" fill-rule="nonzero"/>
+	                            	</g>
+	                            </g>
                             </svg>
-                            <p class="aside__text">Tickets</p>
+                            <p class="aside__text">Block langanar</p>
                         </router-link>
                     </li>
                     <li class="aside__item">
-                        <router-link to="/ideas" class="aside__link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                <g clip-path="url(#clip0_584_261)">
-                                    <path d="M5.50187 14.1984C5.50219 14.395 5.56031 14.5875 5.66937 14.7512L6.20344 15.5541C6.29467 15.6913 6.41841 15.8039 6.56366 15.8817C6.7089 15.9596 6.87114 16.0003 7.03594 16.0003H8.96438C9.12917 16.0003 9.29141 15.9596 9.43665 15.8817C9.5819 15.8039 9.70564 15.6913 9.79688 15.5541L10.3309 14.7512C10.44 14.5875 10.4982 14.3952 10.4984 14.1984L10.4997 13H5.50031L5.50187 14.1984ZM2.5 5.5C2.5 6.88656 3.01406 8.15156 3.86125 9.11812C4.3775 9.70718 5.185 10.9378 5.49281 11.9759C5.49406 11.9841 5.495 11.9922 5.49625 12.0003H10.5037C10.505 11.9922 10.5059 11.9844 10.5072 11.9759C10.815 10.9378 11.6225 9.70718 12.1388 9.11812C12.9859 8.15156 13.5 6.88656 13.5 5.5C13.5 2.45656 11.0284 -0.00937887 7.98281 -3.87451e-06C4.795 0.00968363 2.5 2.59281 2.5 5.5ZM8 3C6.62156 3 5.5 4.12156 5.5 5.5C5.5 5.77625 5.27625 6 5 6C4.72375 6 4.5 5.77625 4.5 5.5C4.5 3.57 6.07 2 8 2C8.27625 2 8.5 2.22375 8.5 2.5C8.5 2.77625 8.27625 3 8 3Z"/>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_584_261">
-                                        <rect width="16" height="16"/>
-                                    </clipPath>
-                                </defs>
+                        <router-link to="/employees" class="aside__link">
+                            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	                            <defs>
+	                            	<clipPath id="clip5_1991">
+	                            		<rect id="filled/social/people-alt" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+	                            	</clipPath>
+	                            </defs>
+	                            <g opacity="0.400000">
+	                            	<rect id="filled/social/people-alt" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	                            	<g clip-path="url(#clip5_1991)">
+	                            		<path id="Vector" d="M13.89 10.94C15.03 11.71 15.83 12.76 15.83 14.16L15.83 16.66L19.16 16.66L19.16 14.16C19.16 12.35 16.19 11.27 13.89 10.94Z" fill="#141A18" fill-opacity="0.600000" fill-rule="evenodd"/>
+	                            		<path id="Vector" d="M10.83 6.66C10.83 8.5 9.34 10 7.5 10C5.65 10 4.16 8.5 4.16 6.66C4.16 4.82 5.65 3.33 7.5 3.33C9.34 3.33 10.83 4.82 10.83 6.66Z" fill="#141A18" fill-opacity="0.600000" fill-rule="evenodd"/>
+	                            		<path id="Vector" d="M12.5 10C14.34 10 15.83 8.5 15.83 6.66C15.83 4.82 14.34 3.33 12.5 3.33C12.1 3.33 11.74 3.41 11.39 3.53C12.08 4.39 12.5 5.48 12.5 6.66C12.5 7.85 12.08 8.94 11.39 9.8C11.74 9.91 12.1 10 12.5 10Z" fill="#141A18" fill-opacity="0.600000" fill-rule="evenodd"/>
+	                            		<path id="Vector" d="M7.5 10.83C5.27 10.83 0.83 11.95 0.83 14.16L0.83 16.66L14.16 16.66L14.16 14.16C14.16 11.95 9.72 10.83 7.5 10.83Z" fill="#141A18" fill-opacity="0.600000" fill-rule="evenodd"/>
+	                            	</g>
+	                            </g>
                             </svg>
-                            <p class="aside__text">Ideas</p>
+                            <p class="aside__text">Managerlar</p>
                         </router-link>
                     </li>
                     <li class="aside__item">
-                        <router-link to="/contacts" class="aside__link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                <path d="M2.4 7.19999C3.2825 7.19999 4 6.48249 4 5.59999C4 4.71749 3.2825 3.99999 2.4 3.99999C1.5175 3.99999 0.8 4.71749 0.8 5.59999C0.8 6.48249 1.5175 7.19999 2.4 7.19999ZM13.6 7.19999C14.4825 7.19999 15.2 6.48249 15.2 5.59999C15.2 4.71749 14.4825 3.99999 13.6 3.99999C12.7175 3.99999 12 4.71749 12 5.59999C12 6.48249 12.7175 7.19999 13.6 7.19999ZM14.4 7.99999H12.8C12.36 7.99999 11.9625 8.17749 11.6725 8.46499C12.68 9.01749 13.395 10.015 13.55 11.2H15.2C15.6425 11.2 16 10.8425 16 10.4V9.59999C16 8.71749 15.2825 7.99999 14.4 7.99999ZM8 7.99999C9.5475 7.99999 10.8 6.74749 10.8 5.19999C10.8 3.65249 9.5475 2.39999 8 2.39999C6.4525 2.39999 5.2 3.65249 5.2 5.19999C5.2 6.74749 6.4525 7.99999 8 7.99999ZM9.92 8.79999H9.7125C9.1925 9.04999 8.615 9.19999 8 9.19999C7.385 9.19999 6.81 9.04999 6.2875 8.79999H6.08C4.49 8.79999 3.2 10.09 3.2 11.68V12.4C3.2 13.0625 3.7375 13.6 4.4 13.6H11.6C12.2625 13.6 12.8 13.0625 12.8 12.4V11.68C12.8 10.09 11.51 8.79999 9.92 8.79999ZM4.3275 8.46499C4.0375 8.17749 3.64 7.99999 3.2 7.99999H1.6C0.7175 7.99999 0 8.71749 0 9.59999V10.4C0 10.8425 0.3575 11.2 0.8 11.2H2.4475C2.605 10.015 3.32 9.01749 4.3275 8.46499Z"/>
+                        <router-link to="/managers" class="aside__link">
+                            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            	<defs>
+                            		<clipPath id="clip5_2003">
+                            			<rect id="filled/places/business-center" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                            		</clipPath>
+                            	</defs>
+                            	<g opacity="0.400000">
+                            		<rect id="filled/places/business-center" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+                            		<g clip-path="url(#clip5_2003)">
+                            			<path id="Vector" d="M8.33 13.33L8.33 12.5L2.5 12.5L2.5 15.83C2.5 16.75 3.24 17.5 4.16 17.5L15.83 17.5C16.75 17.5 17.5 16.75 17.5 15.83L17.5 12.5L11.66 12.5L11.66 13.33L8.33 13.33ZM16.66 5.83L13.32 5.83L13.32 4.16L11.65 2.5L8.32 2.5L6.65 4.16L6.65 5.83L3.33 5.83C2.41 5.83 1.66 6.58 1.66 7.5L1.66 10C1.66 10.92 2.4 11.66 3.33 11.66L8.33 11.66L8.33 10L11.66 10L11.66 11.66L16.66 11.66C17.58 11.66 18.33 10.91 18.33 10L18.33 7.5C18.33 6.58 17.58 5.83 16.66 5.83ZM11.66 5.83L8.33 5.83L8.33 4.16L11.66 4.16L11.66 5.83Z" fill="#141A18" fill-opacity="0.600000" fill-rule="nonzero"/>
+                            		</g>
+                            	</g>
                             </svg>
-                            <p class="aside__text">Contacts</p>
+                            <p class="aside__text">Hodimlar</p>
                         </router-link>
                     </li>
                     <li class="aside__item">
-                        <router-link to="/agents" class="aside__link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                <path d="M8 8C10.2094 8 12 6.20937 12 4C12 1.79063 10.2094 0 8 0C5.79063 0 4 1.79063 4 4C4 6.20937 5.79063 8 8 8ZM10.9937 9.01875L9.5 15L8.5 10.75L9.5 9H6.5L7.5 10.75L6.5 15L5.00625 9.01875C2.77812 9.125 1 10.9469 1 13.2V14.5C1 15.3281 1.67188 16 2.5 16H13.5C14.3281 16 15 15.3281 15 14.5V13.2C15 10.9469 13.2219 9.125 10.9937 9.01875Z"/>
+                        <router-link to="/tasks" class="aside__link">
+                            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            	<defs>
+                            		<clipPath id="clip5_2008">
+                            			<rect id="filled/action/donut-small" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                            		</clipPath>
+                            	</defs>
+                            	<g opacity="0.400000">
+                            		<rect id="filled/action/donut-small" rx="0.000000" width="19.000000" height="19.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+                            		<g clip-path="url(#clip5_2008)">
+                            			<path id="Vector" d="M9.16 7.63L9.16 1.66C5 2.08 1.66 5.65 1.66 10C1.66 14.34 5 17.91 9.16 18.33L9.16 12.36C8.33 12.02 7.5 11.1 7.5 10C7.5 8.9 8.33 7.97 9.16 7.63ZM12.38 9.16L18.33 9.16C17.93 5.2 15 2.05 10.83 1.66L10.83 7.63C11.66 7.88 12.1 8.45 12.38 9.16ZM10.83 12.36L10.83 18.33C15 17.94 17.93 14.79 18.33 10.83L12.38 10.83C12.1 11.55 11.66 12.11 10.83 12.36Z" fill="#141A18" fill-opacity="0.600000" fill-rule="nonzero"/>
+                            		</g>
+                            	</g>
                             </svg>
-                            <p class="aside__text">Agents</p>
-                        </router-link>
-                    </li>
-                    <li class="aside__item">
-                        <router-link to="/articles" class="aside__link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                <path d="M15 11.25V0.75C15 0.334375 14.6656 0 14.25 0H4C2.34375 0 1 1.34375 1 3V13C1 14.6562 2.34375 16 4 16H14.25C14.6656 16 15 15.6656 15 15.25V14.75C15 14.5156 14.8906 14.3031 14.7219 14.1656C14.5906 13.6844 14.5906 12.3125 14.7219 11.8313C14.8906 11.6969 15 11.4844 15 11.25ZM5 4.1875C5 4.08437 5.08437 4 5.1875 4H11.8125C11.9156 4 12 4.08437 12 4.1875V4.8125C12 4.91563 11.9156 5 11.8125 5H5.1875C5.08437 5 5 4.91563 5 4.8125V4.1875ZM5 6.1875C5 6.08437 5.08437 6 5.1875 6H11.8125C11.9156 6 12 6.08437 12 6.1875V6.8125C12 6.91563 11.9156 7 11.8125 7H5.1875C5.08437 7 5 6.91563 5 6.8125V6.1875ZM12.9187 14H4C3.44688 14 3 13.5531 3 13C3 12.45 3.45 12 4 12H12.9187C12.8594 12.5344 12.8594 13.4656 12.9187 14Z"/>
-                            </svg>
-                            <p class="aside__text">Articles</p>
+
+                            <p class="aside__text">Vazifalar</p>
                         </router-link>
                     </li>
                 </ul>
 
             </aside>
         <main class="main">
+            <div class="header__wrapper">
+                    <h2 class="header__email">manager@mail.ru</h2>
+                    <p class="header__text">Администратор компании</p>
+            </div>
             <RouterView />
         </main>
     </div>
