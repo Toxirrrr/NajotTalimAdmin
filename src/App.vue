@@ -4,12 +4,8 @@ let token = window.localStorage.getItem("token")
 let router = useRouter()
 let route = useRoute()
 
-if (route.path == "/") {
-  router.push('general')
-}
-if(!token) {
+if (!token) {
   router.push('/login')
-
 }
 </script>
 

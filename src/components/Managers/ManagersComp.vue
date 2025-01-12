@@ -1,77 +1,19 @@
 <script setup>
-import { ref } from 'vue';
 import './Managers.css'
+import { ref } from 'vue';
+import { getAll, editManager } from '@/Services/ManagerService';
+import { components } from '../';
 let delete__user = ref(false)
 let edit__user = ref(false)
 let change__status = ref(false)
-const tableData = ref([
-    {
-        name: "Петренко Владимир",
-        type: "Manager",
-        phone: "+7 900 000-00-00",
-        email: "v.petrenko@mail.ru",
-        status: "Block",
-    },
-    {
-        name: "Новиков Иван",
-        type: "Hodim",
-        phone: "+7 900 000-00-00",
-        email: "i.novikov@mail.ru",
-        status: "Proverka ankety",
-    },
-    {
-        name: "Макарова Анна",
-        type: "Manager",
-        phone: "+7 900 000-00-00",
-        email: "a.makarova@gmail.com",
-        status: "Active",
-    },
-    {
-        name: "Никифоров Леонид",
-        type: "Manager",
-        phone: "+7 900 000-00-00",
-        email: "l.nikiforov@mail.ru",
-        status: "Odobren",
-    },
-    {
-        name: "Петренко Владимир",
-        type: "Manager",
-        phone: "+7 900 000-00-00",
-        email: "v.petrenko@mail.ru",
-        status: "Block",
-    },
-    {
-        name: "Новиков Иван",
-        type: "Hodim",
-        phone: "+7 900 000-00-00",
-        email: "i.novikov@mail.ru",
-        status: "Proverka ankety",
-    },
-    {
-        name: "Макарова Анна",
-        type: "Manager",
-        phone: "+7 900 000-00-00",
-        email: "a.makarova@gmail.com",
-        status: "Active",
-    },
-    {
-        name: "Никифоров Леонид",
-        type: "Manager",
-        phone: "+7 900 000-00-00",
-        email: "l.nikiforov@mail.ru",
-        status: "Odobren",
-    },
-]);
+let selectedType = ref()
+
 const statusClass = (status) => {
     switch (status) {
         case "Block":
-            return "status__block";
-        case "Proverka ankety":
             return "status__check";
         case "Active":
             return "status__active";
-        case "Odobren":
-            return "status__approved";
         default:
             return "";
     }
@@ -81,6 +23,8 @@ const editRow = (index) => {
 };
 const changeStatus = (index) => {
     change__status.value = true
+    components.employeesId = index.target.id
+
 };
 const deleteRow = (index) => {
     delete__user.value = true
@@ -90,6 +34,13 @@ function exit() {
     delete__user.value = false
     edit__user.value = false
 }
+
+function editStatus() {
+    editManager(selectedType.value);
+    change__status.value = false
+    getAll()
+}
+getAll()
 </script>
 <template>
     <div>
@@ -107,14 +58,15 @@ function exit() {
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(row, index) in tableData" :key="index">
+                <tr v-for="(row, index) in components.getAllEmployees" :key="index">
                     <td>{{ row.name }}</td>
                     <td>{{ row.type }}</td>
-                    <td>{{ row.phone }}</td>
+                    <td>+7 900 000-00-00</td>
                     <td>{{ row.email }}</td>
                     <td>
-                        <button :class="statusClass(row.status)" class="status__btn" @click="changeStatus(index)">{{
-                            row.status }}</button>
+                        <button :class="statusClass(row.status)" class="status__btn" @click="changeStatus"
+                            :id="row.id">{{
+                                row.isActive ? 'Active' : 'Block' }}</button>
                     </td>
                     <td>
                         <button class="edit__button" @click="editRow(index)">O'zgartirish</button>
@@ -154,7 +106,7 @@ function exit() {
                         <input class="modal__input" type="email" placeholder="Введите имя">
                     </label>
                     <label class="modal__label" for="userType">Hodim Turi:
-                        <select class="modal__input" v-model="selectedType" id="userType">
+                        <select class="modal__input" id="userType">
                             <option value="manager">Block</option>
                             <option value="hodim">Active</option>
                             <option value="developer">Developer</option>
@@ -179,15 +131,14 @@ function exit() {
                 </h2>
                 <div class="modal__text-wrapper add">
                     <label class="modal__label" for="userType">Hodim Turi:
-                        <select class="modal__input" v-model="selectedType" id="userType">
-                            <option value="manager" selected>Manager</option>
-                            <option value="hodim">Hodim</option>
-                            <option value="developer">Proverka ankety</option>
+                        <select class="modal__input" v-model="selectedType" :value="selectedType" id="userType">
+                            <option :value="false">Block</option>
+                            <option :value="true">Active</option>
                         </select>
                     </label>
                     <div class="modal__btn-wrapper">
                         <button @click="exit" class="exit__btn">Bekorqilish</button>
-                        <button class="succes__btn">Saqlash</button>
+                        <button class="succes__btn" @click="editStatus">Saqlash</button>
                     </div>
                 </div>
             </div>

@@ -1,20 +1,23 @@
 <script setup>
-import router from "@/router";
 import { reactive } from "vue";
+import { useRouter } from "vue-router";
 import { login } from '../../Services/UserService'
 import "./Login.css";
 
-
+let router = useRouter()
 let user = reactive({
     username: '',
     password: ''
 })
 
-function loginUser(evt) {
+async function loginUser(evt) {
     evt.preventDefault()
     let ok = login(user)
-    
-    //  router.push("/general")
+
+    if (ok) {
+        router.push("/general")
+    }
+
 }
 </script>
 <template>
