@@ -1,11 +1,15 @@
 <script setup>
 import { RouterView, useRouter, useRoute } from 'vue-router'
+let token = window.localStorage.getItem("token")
 let router = useRouter()
 let route = useRoute()
-router.push("/")
 
 if (route.path == "/") {
   router.push('general')
+}
+if(!token) {
+  router.push('/login')
+
 }
 </script>
 
