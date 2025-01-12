@@ -1,0 +1,68 @@
+.all__wrapper {
+    display: flex;
+}
+.position {
+    width: 275px;
+}
+.aside {
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #363740;
+    height: 100vh;
+}
+.aside__logo {
+    padding: 37px 43px 63px 32px;
+}
+.aside__item {
+    display: flex;
+    align-items: center;
+}
+.aside__link {
+    width: 100%;
+    display: flex;
+    padding: 18px 24px 18px 32px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+.aside__link:hover .aside__text {
+    color: white;
+}
+svg {
+    fill: #60626E;
+    opacity: 0.4;
+}
+.aside__link:hover svg {
+    fill: white;
+    opacity: 1;
+}
+.aside__link:hover {
+    background-color: #3F4049;
+}
+.aside__text {
+    margin-left: 24px;
+    color: #A4A6B3;
+    font-family: Mulish;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.2px;
+}
+.aside__bottom-list {
+    border-top: 1px solid #40414A;
+    margin-top: 16px;
+    padding-top: 16px;
+}
+ul .router-link-exact-active .aside__text{
+    color: white;
+}
+ul .router-link-exact-active svg{
+    fill: white;
+    opacity: 1;
+}
+ul .router-link-exact-active{
+    background-color: #3F4049;
+    border-left: 3px solid white;
+}
+
