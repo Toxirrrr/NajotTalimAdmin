@@ -8,7 +8,7 @@
     position: fixed;
     overflow: hidden;
     overflow-y: auto;
-    background-color: #363740;
+    background-color: #e3e3e3;
     height: 100vh;
 }
 .aside__logo {
@@ -42,17 +42,12 @@ svg {
 .aside__text {
     margin-left: 24px;
     color: #A4A6B3;
-    font-family: Mulish;
+    font-family: 'Mulish';
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.2px;
-}
-.aside__bottom-list {
-    border-top: 1px solid #40414A;
-    margin-top: 16px;
-    padding-top: 16px;
 }
 ul .router-link-exact-active .aside__text{
     color: white;
@@ -62,7 +57,7 @@ ul .router-link-exact-active svg{
     opacity: 1;
 }
 ul .router-link-exact-active{
-    background-color: #3F4049;
-    border-left: 3px solid white;
+    background-color: #e8e8e8;
+    
 }
 
