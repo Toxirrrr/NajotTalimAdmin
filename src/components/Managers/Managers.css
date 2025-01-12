@@ -1,3 +1,10 @@
+.search__input {
+    margin-top: 5px;
+    padding: 11px 0 11px 14px;
+    border: 1px solid rgb(227, 225, 225);
+    border-radius: 8px;
+    overflow: hidden;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -135,9 +142,44 @@ button:hover {
   padding: 11px 16px;
 }
 .succes__btn {
-    
+  border-radius: 8px;
+  padding: 11px 16px;
+  background: rgb(20, 184, 144);
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: left;
 }
 .close {
-    border: none;
-    background-color: transparent;
+  border: none;
+  background-color: transparent;
+}
+
+.modal__label {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+  text-align: left;
+}
+.modal__input {
+  margin-top: 5px;
+  padding: 11px 0 11px 14px;
+  border: 1px solid rgb(227, 225, 225);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.add {
+  padding-top: 12px;
+}
+.block {
+    display: block;
 }

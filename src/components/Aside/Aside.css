@@ -22,7 +22,7 @@
 .aside__item {
   display: flex;
   align-items: center;
-  width: 206px;
+  max-width: 206px;
   margin: 8px
 }
 .aside__link {
