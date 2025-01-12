@@ -14,7 +14,6 @@
   min-width: 230px;
 }
 .aside__list {
-  gap: 12;
   padding: 8px 12px 8px 12px;
 }
 .aside__logo {
@@ -24,6 +23,7 @@
   display: flex;
   align-items: center;
   width: 206px;
+  margin: 8px
 }
 .aside__link {
   width: 100%;
