@@ -16,7 +16,7 @@ function remove() {
     <div class="all__wrapper">
         <aside class="aside">
             <router-link class="router__active" to="/general">
-                <img class="aside__logo" src="/img/logo.svg" alt="logo">
+                <img class="aside__logo" src="/logo.svg" alt="logo">
             </router-link>
             <ul class="aside__list">
                 <li class="aside__item">
