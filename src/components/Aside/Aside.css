@@ -98,3 +98,6 @@ ul .router-link-exact-active {
   text-align: left;
   text-align: right;
 }
+.main__wrapper {
+  padding: 32px 24px 0;
+}

@@ -50,7 +50,7 @@ import './Aside.css'
                                 </g>
                             </g>
                         </svg>
-                        <p class="aside__text">Block langanar</p>
+                        <p class="aside__text">Blocklanganar</p>
                     </router-link>
                 </li>
                 <li class="aside__item">
@@ -84,7 +84,7 @@ import './Aside.css'
                                 </g>
                             </g>
                         </svg>
-                        <p class="aside__text">Managerlar</p>
+                        <p class="aside__text">Activelar</p>
                     </router-link>
                 </li>
                 <li class="aside__item">
@@ -139,7 +139,9 @@ import './Aside.css'
                 <h2 class="header__email">manager@mail.ru</h2>
                 <p class="header__text">Администратор компании</p>
             </div>
-            <RouterView />
+            <div class="main__wrapper">
+                <RouterView />
+            </div>
         </main>
     </div>
 </template>

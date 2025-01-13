@@ -2,7 +2,10 @@ import {reactive} from 'vue'
 
 let components = reactive({
     getAllEmployees: [],
-    employeesId: 0
+    getAllTasks: [],
+    getById: {},
+    employeesId: 0,
+    taskId: 0
 })
 
 export { components }

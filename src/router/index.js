@@ -10,32 +10,36 @@ const router = createRouter({
       children: [
         {
           path: 'general',
-          component: () => import('../components/General/GeneralComp.vue')
+          component: () => import('../components/General/GeneralComp.vue'),
         },
         {
           path: 'blocked',
-          component: () => import('../components/Blocked/BlockedComp.vue')
+          component: () => import('../components/Blocked/BlockedComp.vue'),
         },
         {
           path: 'employees',
-          component: () => import('../components/Employees/EmployeesComp.vue')
+          component: () => import('../components/Employees/EmployeesComp.vue'),
         },
         {
           path: 'managers',
-          component: () => import('../components/Managers/ManagersComp.vue')
+          component: () => import('../components/Managers/ManagersComp.vue'),
         },
         {
           path: 'tasks',
-          component: () => import('../components/Tasks/TasksComp.vue')
-        }
-      ]
+          component: () => import('../components/Tasks/TasksComp.vue'),
+        },
+        {
+          path: '/managers/:id',
+          component: () => import('../components/User/UserComp.vue'),
+        },
+      ],
     },
     {
-      path: "/login",
-      name: "login",
-      component: () => import('../views/LoginView.vue')
-    }
-  ]
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/LoginView.vue'),
+    },
+  ],
 })
 
 export default router
