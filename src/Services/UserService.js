@@ -15,6 +15,8 @@ async function login(user) {
   let token = succes.accessToken
   if (token) {
     localStorage.setItem('token', token)
+    localStorage.setItem('user', JSON.stringify(succes.user))
+
     return succes
   }
 }

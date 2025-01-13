@@ -9,6 +9,12 @@ async function getAll() {
         'Content-Type': 'application/json',
       },
     })
+    
+    if(getManagers.status == 401) {
+      location.href = 'login'
+      localStorage.removeItem('token')
+    }
+    
 
     components.getAllEmployees = await getManagers.json()
 
