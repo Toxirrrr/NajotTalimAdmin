@@ -54,16 +54,13 @@ async function editManagerStatus(e) {
   }
 }
 
-async function deleteManager() {
+async function deleteManager(id) {
   try {
-    let id = components.taskId
     console.log(id);
     
     const response = await fetch(`${api}managers/${id}`, {
       headers: {
-        Authorization: 'Bearer ' + localStorage.getItem('token'),
-        'Content-Type': 'application/json',
-      },
+        Authorization: 'Bearer ' + localStorage.getItem('token')      },
       method: 'DELETE',
     })
   } catch (error) {

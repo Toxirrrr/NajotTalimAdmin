@@ -1,0 +1,70 @@
+.user__wrapper {
+  border: 1px solid rgb(227, 225, 225);
+  border-radius: 16px 16px 0px 0px;
+  padding: 32px 28px;
+  background: rgb(255, 255, 255);
+}
+.user__title {
+  margin-top: 8px;
+  color: rgb(44, 48, 48);
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+  text-align: left;
+}
+.user__text {
+  color: rgb(154, 156, 156);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.user__task {
+  margin-top: 28px;
+  margin-bottom: 26px;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.user__list {
+  padding-left: 16px;
+}
+.user__item {
+  list-style: decimal;
+}
+.user__btn {
+  margin: 20px 0 0;
+}
+
+.user__modal-text {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+  text-align: left;
+}
+.user__modal-list {
+  padding: 32px 0 29px 19px;
+  box-sizing: border-box;
+  border: 1px solid rgb(227, 225, 225);
+  border-radius: 8px;
+}
+.user__modal-item {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+}

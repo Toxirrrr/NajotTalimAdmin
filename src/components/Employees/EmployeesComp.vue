@@ -60,8 +60,7 @@ const editRow = async (index) => {
     edit__user.value = true
 };
 const deleteRow = async (index) => {
-    const userId = index.target.id;
-    await deleteManager(userId);
+    components.employeesId = index.target.id;
     delete__user.value = true
 };
 function addNewUser() {
@@ -72,9 +71,13 @@ function editUser() {
     edit__user.value = false
     getAll()
 }
-function deleteUser() {
-    deleteManager()
-    delete__user.value = false
+async function deleteUser() {
+    try {
+        await deleteManager(components.employeesId)
+        delete__user.value = false
+    } catch (error) {
+        console.error("Ma'lumotlarni yuklashda xatolik:", error);
+    }
     getAll()
 }
 function exit() {
@@ -94,28 +97,29 @@ getAll()
         <input class="search__input" type="text" placeholder="Поиск по фамилии" @input="search" v-model="searchQuery">
         <div v-if="components.getAllEmployees && components.getAllEmployees.length > 0">
             <table>
-            <thead>
-                <tr class="table__head">
-                    <th>Фамилия Имя</th>
-                    <th>Turi</th>
-                    <th>Телефон</th>
-                    <th>E-mail</th>
-                    <th>Действия</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="(row, index) in components.getAllEmployees.filter(row => row.isActive)" :key="index" @click="navigateToUser(row.id)">
-                    <td>{{ row.name + " " + row.last_name }}</td>
-                    <td>{{ row.type }}</td>
-                    <td>+7 900 000-00-00</td>
-                    <td>{{ row.email }}</td>
-                    <td>
-                        <button class="edit__button" @click.stop="editRow" :id="row.id">O'zgartirish</button>
-                        <button class="delete__button" @click.stop="deleteRow" :id="row.id">O'chirish</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                <thead>
+                    <tr class="table__head">
+                        <th>Фамилия Имя</th>
+                        <th>Turi</th>
+                        <th>Телефон</th>
+                        <th>E-mail</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(row, index) in components.getAllEmployees.filter(row => row.isActive)" :key="index"
+                        @click="navigateToUser(row.id)">
+                        <td>{{ row.name + " " + row.last_name }}</td>
+                        <td>{{ row.type }}</td>
+                        <td>+7 900 000-00-00</td>
+                        <td>{{ row.email }}</td>
+                        <td>
+                            <button class="edit__button" @click.stop="editRow" :id="row.id">O'zgartirish</button>
+                            <button class="delete__button" @click.stop="deleteRow" :id="row.id">O'chirish</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div class="empty__wrapper" v-else>
             <img src="/img/filled_maps_store-mall-directory.svg" alt="img">

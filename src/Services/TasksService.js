@@ -46,4 +46,26 @@ async function deleteTask(id) {
     throw 1
   }
 }
-export { getAllTasks, postTask, deleteTask }
+
+async function putTask(e, id) {
+  try {
+    console.log(e, id)
+
+    const response = await fetch(`${api}tasks/${id}`, {
+      method: 'PUT',
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem('token'),
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: e.name,
+        type: e.type,
+      }),
+    })
+    // return await response.json()
+  } catch (error) {
+    console.error('PUT so‘rovida xatolik:', error)
+    throw error
+  }
+}
+export { getAllTasks, postTask, deleteTask, putTask }

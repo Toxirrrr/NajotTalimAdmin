@@ -12,7 +12,7 @@ let user = reactive({
 
 async function loginUser(evt) {
     evt.preventDefault()
-    let ok = login(user)
+    let ok = await login(user)
 
     if (ok) {
         router.push("/general")

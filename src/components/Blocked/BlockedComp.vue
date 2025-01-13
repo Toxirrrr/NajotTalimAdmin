@@ -59,8 +59,7 @@ const editRow = async (index) => {
     edit__user.value = true
 };
 const deleteRow = async (index) => {
-    const userId = index.target.id;
-    await deleteManager(userId);
+    components.employeesId = index.target.id;
     delete__user.value = true
 };
 function addNewUser() {
@@ -71,9 +70,13 @@ function editUser() {
     edit__user.value = false
     getAll()
 }
-function deleteUser() {
-    deleteManager()
-    delete__user.value = false
+async function deleteUser() {
+    try {
+        await deleteManager(components.employeesId)
+        delete__user.value = false
+    } catch (error) {
+        console.error("Ma'lumotlarni yuklashda xatolik:", error);
+    }
     getAll()
 }
 function exit() {
